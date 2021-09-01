@@ -4,10 +4,13 @@
 
 // Funzioni
 
-// cellCreator per calcolare il numero totale delle cellule del campo
-function cellCreator(num){
+// gridCreator per creare una grilia
+
+function gridCreator(num){
     num = num*num;
-    return num;
+    for (var i = 1; i <= num; i++){
+        document.getElementById("camp").innerHTML += `<div class="square">${i}<div>`;
+        } 
 }
 
 //Programma principale
@@ -15,11 +18,7 @@ function cellCreator(num){
 var CellNumberUser = parseInt(prompt("Inserisci da quante celle sarà composto il campo da gioco: da 1 a 10 "));
 console.log("l'utente ha scelto", CellNumberUser);
 
-
-// 2. creo ciclo for per "disegnare" il campo, ogni "i" è un quadrato di grilia
-for (var i = 1; i <= cellCreator(CellNumberUser); i++){
-document.getElementById("camp").innerHTML += `<div class="square">${i}<div>`;
-}
+var numberTotalOfCell = gridCreator(CellNumberUser);  
 
 // 3.aggiungo evento click per cambiare il colore al click sul quadrato
 document.getElementById("camp").addEventListener("click",

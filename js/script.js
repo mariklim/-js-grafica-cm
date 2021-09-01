@@ -4,7 +4,7 @@
 
 // Funzioni
 
-// gridCreator per creare una grilia
+// gridCreator per creare una griglia
 
 function gridCreator(num){
     num = num*num;
@@ -24,5 +24,7 @@ var numberTotalOfCell = gridCreator(CellNumberUser);
 document.getElementById("camp").addEventListener("click",
     function(chosen){
         chosen.target.classList.toggle("clicked");
+        alert(chosen.target.innerHTML);
+        
     }
 )

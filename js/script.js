@@ -9,7 +9,7 @@
 function gridCreator(num){
     num = num*num;
     for (var i = 1; i <= num; i++){
-        document.getElementById("camp").innerHTML += `<div class="square">${i}<div>`;
+        document.getElementById("camp").innerHTML += `<div class="square">${i}</div>`;
         } 
 }
 
@@ -24,7 +24,7 @@ var numberTotalOfCell = gridCreator(CellNumberUser);
 document.getElementById("camp").addEventListener("click",
     function(chosen){
         chosen.target.classList.toggle("clicked");
-        alert(chosen.target.innerHTML);
+        alert(chosen.target.innerHTML)
         
     }
 )
